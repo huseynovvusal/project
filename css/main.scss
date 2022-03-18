@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+$light: #ccc;
+$white: #fff;
+$pink: #fef4e8;
+$dark: #101010;
+$gray: #505050;
+$orange: #f59926;
+$orange-h: #ff9718;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: $pink;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    height: 100%;
+    position: relative;
+    display: flex;
+
+    nav {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+
+      .logo {
+        color: $dark;
+        h3 {
+          margin: 0;
+        }
+      }
+
+      .hamburger {
+        display: none;
+        z-index: 100;
+
+        @media screen and(max-width:1024px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 1.5rem;
+          height: 1rem;
+
+          div {
+            height: 2px;
+            width: 100%;
+            background: $dark;
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        list-style-type: none;
+        padding: 0 !important;
+        margin: 0 !important;
+
+        @media screen and(max-width:1024px) {
+          position: fixed;
+          top: -100%;
+          left: 0;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          background: $white;
+          width: 100%;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+          transition: 300ms ease;
+
+          &.active {
+            top: 0;
+          }
+        }
+
+        li {
+          display: flex;
+          margin: 0 0.25rem;
+
+          @media screen and(max-width:1024px) {
+            padding: 1rem;
+          }
+
+          a {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: $gray;
+            font-weight: 500;
+
+            &:hover {
+              color: $dark;
+              font-weight: 600;
+            }
+          }
+
+          &:nth-child(3) {
+            a {
+              background: $orange;
+              color: $white;
+              font-weight: 500;
+              transition: 300ms;
+
+              &:hover {
+                background: $orange-h;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      max-height: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      box-sizing: border-box;
+
+      @media screen and(max-width:1024px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media screen and(max-width:1024px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        h1 {
+          font-weight: 600;
+          color: $dark;
+        }
+
+        p {
+          color: $gray;
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+        }
+
+        a {
+          padding: 0.5rem 1rem;
+          text-decoration: none;
+          font-weight: 500;
+          background: $orange;
+          color: $white;
+          font-weight: 500;
+          transition: 300ms;
+
+          &:hover {
+            background: $orange-h;
+          }
+        }
+      }
+
+      img {
+        width: 40%;
+        padding-left: 2rem;
+        box-sizing: border-box;
+
+        @media screen and(max-width:720px) {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+[
+  {
+    "header": "1. What do you think about working on social media?",
+    "variants": [
+      "It's boring to be on social media all day.",
+      "Nothing came to mind",
+      "It sounds very nice to the ear!"
+    ],
+    "answer": "It sounds very nice to the ear!"
+  },
+
+  {
+    "header": "2. How important is imagination to develop a game?",
+    "variants": [
+      "I have no idea about that",
+      "Ooo, imagination is the key",
+      "I don't think it's important"
+    ],
+    "answer": "Ooo, imagination is the key"
+  },
+
+  {
+    "header": "3. What does playing a game mean to you?",
+    "variants": [
+      "I don't like it much, but sometimes I play",
+      "Playing the game is just a waste of time",
+      "This is a great way to have fun"
+    ],
+    "answer": "This is a great way to have fun"
+  },
+
+  {
+    "header": "4. What do you think first of all when you visit any site?",
+    "variants": [
+      "First of all, I am interested in the design of the site",
+      "I'm not interested in the site, the main reason is access",
+      "User convenience is paramount"
+    ],
+    "answer": "First of all, I am interested in the design of the site"
+  },
+
+  {
+    "header": "5. Do you usually enjoy working with visual concepts or more logical concepts?",
+    "variants": ["Logical concepts", "I’m not sure", "Visual concepts "],
+    "answer": "Visual concepts "
+  },
+
+  {
+    "header": "6. Which program is not necessary for a graphic designer",
+    "variants": ["VirtualDJ", "CorelDRAW Graphics Suite", "Adobe Photoshop"],
+    "answer": "VirtualDJ"
+  },
+
+  {
+    "header": "7. Editing is almost an art form because",
+    "variants": [
+      "You have to know what to cut to make people look good",
+      "You are trying to cover up the mistakes of the director and camera man.",
+      "You are blending together images and sound to make a connected piece"
+    ],
+    "answer": "You are blending together images and sound to make a connected piece"
+  },
+
+  {
+    "header": "8. What algorithm do we use when we're looking for the Post Office?",
+    "variants": ["A list of instructions", "A set of directions", "A recipe"],
+    "answer": "A set of directions"
+  },
+
+  {
+    "header": "9. Did you have an imaginary friend when you were growing up?",
+    "variants": [
+      "I had several",
+      "I can’t remember",
+      "Of course I had an imaginary friend"
+    ],
+    "answer": "I had several"
+  },
+
+  {
+    "header": " 10. Which looks more accurate?",
+    "variants": ["quiz1.jpeg", "quiz2.jpeg", "quiz3.jpeg"],
+    "answer": "quiz2.jpeg"
+  }
+]

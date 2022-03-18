@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100vw;
+  box-sizing: border-box;
+  flex-direction: column;
+  user-select: none;
+}
+
+$dark: #1010102d;
+$blue: rgb(52, 43, 185);
+$light-blue: rgb(141, 185, 255);
+// =========================================
+$light: #ccc;
+$white: #fff;
+$pink: #fef4e8;
+$dark: #101010;
+$gray: #505050;
+$orange: #f59926;
+$orange-h: #ff9718;
+
+.container {
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  perspective: 500px;
+
+  &.flip {
+    transition: 600ms ease;
+    transform: rotateX(180deg);
+  }
+
+  @media (max-width: 525px) {
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  .finish {
+    display: none;
+    border: none;
+    outline: none;
+    background: $orange;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    color: $white;
+    font-weight: 500;
+    transition: 300ms ease;
+    cursor: pointer;
+  }
+
+  &.finish .finish {
+    display: inline-block;
+  }
+
+  &.disable {
+    pointer-events: none;
+  }
+
+  .question {
+    background: $orange;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    color: $white;
+    padding: 0.75rem 1rem;
+  }
+
+  .answers {
+    padding: 0 0.5rem;
+    .answer {
+      padding: 0.5rem 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      img {
+        max-width: 50%;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      &.active {
+        background: $orange-h;
+        color: $white;
+      }
+    }
+  }
+
+  .alert {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $orange;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    transform: translateY(0);
+    opacity: 1;
+    animation: 300ms move ease;
+
+    @keyframes move {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    a {
+      padding: 0.25rem 1rem;
+      background: $white;
+      color: $orange;
+      text-decoration: none;
+      font-size: 1.25rem;
+      border-radius: 0.25rem;
+      margin-top: 1rem;
+    }
+  }
+}

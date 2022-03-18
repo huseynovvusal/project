@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  width: 100vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  font-size: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.container.flip {
+  -webkit-transition: 600ms ease;
+  transition: 600ms ease;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+@media (max-width: 525px) {
+  .container {
+    width: 100%;
+    margin: 0 1rem;
+  }
+}
+
+.container .finish {
+  display: none;
+  border: none;
+  outline: none;
+  background: #f59926;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+
+.container.finish .finish {
+  display: inline-block;
+}
+
+.container.disable {
+  pointer-events: none;
+}
+
+.container .question {
+  background: #f59926;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+
+.container .answers {
+  padding: 0 0.5rem;
+}
+
+.container .answers .answer {
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container .answers .answer img {
+  max-width: 50%;
+}
+
+.container .answers .answer:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.container .answers .answer.active {
+  background: #ff9718;
+  color: #fff;
+}
+
+.container .alert {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f59926;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  -webkit-animation: 300ms move ease;
+          animation: 300ms move ease;
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container .alert a {
+  padding: 0.25rem 1rem;
+  background: #fff;
+  color: #f59926;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=main.css.map */

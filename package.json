@@ -9,5 +9,5 @@
     "dev": "nodemon index.js"
   },
   "author": "Vusal Huseynov",
-  "license": "ISC"
+  "license": "MIT"
 }
